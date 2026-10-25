@@ -42,4 +42,4 @@ This prompt is also recorded as a comment at the top of `prometheus.yml`.
 | Root disk usage | `100 * (1 - node_filesystem_avail_bytes{mountpoint="/"} / node_filesystem_size_bytes{mountpoint="/"})` |
 | Load average | `node_load1`, `node_load5`, `count(count by (cpu) (node_cpu_seconds_total))` |
 | Bulk upload annotation | `sum(increase(caption_requests_total{mode="bulk"}[15s])) > 0` |
-EOF
+
