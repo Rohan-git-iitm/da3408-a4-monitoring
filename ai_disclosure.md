@@ -1,5 +1,4 @@
-cd ~/Desktop/AIops/a4-monitoring
-cat > ai_disclosure.md << 'EOF'
+
 # AI Disclosure
 
 This assignment was completed with help from Claude (Anthropic), used as a step-by-step guide while I set up and ran everything in an Ubuntu VM (UTM) on my Mac.
