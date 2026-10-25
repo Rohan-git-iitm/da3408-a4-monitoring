@@ -1,0 +1,25 @@
+# AI attribution: PromQL queries in grafana_dashboard.json were generated with Claude.
+# Prompt: "Build a Grafana dashboard for a Streamlit BLIP captioning app exposing caption_*
+# Counters, Gauges, Histograms and Summaries plus node_exporter metrics, with rows for health,
+# throughput/latency, workload/clients and system resources, following the 7 plotting commandments."
+
+global:
+  scrape_interval: 5s
+  evaluation_interval: 5s
+
+scrape_configs:
+  - job_name: "caption_app"
+    static_configs:
+      - targets: ["localhost:8000"]
+        labels:
+          app: "blip-captioner"
+
+  - job_name: "node"
+    static_configs:
+      - targets: ["localhost:9100"]
+        labels:
+          host: "utm-vm"
+
+  - job_name: "prometheus"
+    static_configs:
+      - targets: ["localhost:9090"]
