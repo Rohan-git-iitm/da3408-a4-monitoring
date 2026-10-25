@@ -9,6 +9,7 @@ scraped by Prometheus alongside node_exporter, visualized in Grafana.
 - `metrics.py`: Counters, Gauges, Histograms, Summaries, Info (served on :8000)
 - `prometheus.yml`: scrape config for the app (:8000), node_exporter (:9100), Prometheus (:9090)
 - `grafana_dashboard.json`: Grafana dashboard export
+- `ai_disclosure.md`: recorded AI usage
 
 ## Run
     uv venv --python 3.11 .venv && source .venv/bin/activate
